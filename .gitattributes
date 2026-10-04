@@ -1,0 +1,7 @@
+# Email fixtures use RFC-style CRLF. Preserve bytes for duplicate-import tests.
+*.eml -text whitespace=cr-at-eol
+*.pdf binary
+*.xlsx binary
+# Preserve the spreadsheet template and verbatim command-output evidence.
+docs/*.csv -text whitespace=cr-at-eol
+docs/evidence/*.txt whitespace=-blank-at-eof

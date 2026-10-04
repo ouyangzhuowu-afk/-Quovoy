@@ -1,0 +1,1396 @@
+[
+  {
+    "id": "01-complete",
+    "title": "完整单品询价",
+    "description": "英文 EML，所有询价和产品字段明确写出。",
+    "synthetic": true,
+    "files": [
+      "01-complete/complete.eml"
+    ],
+    "expected": {
+      "itemCount": 1,
+      "fields": [
+        {
+          "key": "customer",
+          "rawValue": "Synthetic Atlas Machinery Ltd",
+          "filename": "complete.eml",
+          "locator": "email:line:2"
+        },
+        {
+          "key": "contact",
+          "rawValue": "Alex Example <alex@example.test>",
+          "filename": "complete.eml",
+          "locator": "email:line:3"
+        },
+        {
+          "key": "targetDelivery",
+          "rawValue": "2026-11-15",
+          "filename": "complete.eml",
+          "locator": "email:line:4"
+        },
+        {
+          "key": "destination",
+          "rawValue": "Hamburg, Germany",
+          "filename": "complete.eml",
+          "locator": "email:line:5"
+        },
+        {
+          "key": "incoterms",
+          "rawValue": "FCA Shanghai",
+          "filename": "complete.eml",
+          "locator": "email:line:6"
+        },
+        {
+          "key": "paymentTerms",
+          "rawValue": "30% deposit, balance before shipment",
+          "filename": "complete.eml",
+          "locator": "email:line:7"
+        },
+        {
+          "key": "currency",
+          "rawValue": "USD",
+          "filename": "complete.eml",
+          "locator": "email:line:8"
+        },
+        {
+          "key": "validity",
+          "rawValue": "2026-10-31",
+          "filename": "complete.eml",
+          "locator": "email:line:9"
+        }
+      ],
+      "items": [
+        {
+          "model": "FL-100",
+          "fields": [
+            {
+              "key": "productName",
+              "rawValue": "Machined flange",
+              "filename": "complete.eml",
+              "locator": "email:line:11"
+            },
+            {
+              "key": "model",
+              "rawValue": "FL-100",
+              "filename": "complete.eml",
+              "locator": "email:line:12"
+            },
+            {
+              "key": "quantity",
+              "rawValue": "100",
+              "filename": "complete.eml",
+              "locator": "email:line:13"
+            },
+            {
+              "key": "unit",
+              "rawValue": "pcs",
+              "filename": "complete.eml",
+              "locator": "email:line:14"
+            },
+            {
+              "key": "material",
+              "rawValue": "Stainless steel 304",
+              "filename": "complete.eml",
+              "locator": "email:line:15"
+            },
+            {
+              "key": "dimensions",
+              "rawValue": "80 x 12 mm",
+              "filename": "complete.eml",
+              "locator": "email:line:16"
+            },
+            {
+              "key": "technicalParameters",
+              "rawValue": "Surface Ra 1.6; drawing tolerances require human review",
+              "filename": "complete.eml",
+              "locator": "email:line:17"
+            }
+          ]
+        }
+      ],
+      "checks": [
+        "all-explicit-fields",
+        "approval-after-human-review"
+      ]
+    }
+  },
+  {
+    "id": "02-multiple",
+    "title": "多产品行与跨格式来源",
+    "description": "文本 PDF 与 Excel 各包含两个型号；相同型号跨文件合并并保留双方来源。",
+    "synthetic": true,
+    "files": [
+      "02-multiple/multi.pdf",
+      "02-multiple/multi.xlsx"
+    ],
+    "expected": {
+      "itemCount": 2,
+      "fields": [
+        {
+          "key": "customer",
+          "rawValue": "Synthetic Atlas Machinery Ltd",
+          "filename": "multi.xlsx",
+          "locator": "'RFQ'!B2"
+        },
+        {
+          "key": "contact",
+          "rawValue": "Alex Example <alex@example.test>",
+          "filename": "multi.xlsx",
+          "locator": "'RFQ'!B3"
+        },
+        {
+          "key": "targetDelivery",
+          "rawValue": "2026-11-15",
+          "filename": "multi.xlsx",
+          "locator": "'RFQ'!B4"
+        },
+        {
+          "key": "destination",
+          "rawValue": "Hamburg, Germany",
+          "filename": "multi.xlsx",
+          "locator": "'RFQ'!B5"
+        },
+        {
+          "key": "incoterms",
+          "rawValue": "FCA Shanghai",
+          "filename": "multi.xlsx",
+          "locator": "'RFQ'!B6"
+        },
+        {
+          "key": "paymentTerms",
+          "rawValue": "30% deposit, balance before shipment",
+          "filename": "multi.xlsx",
+          "locator": "'RFQ'!B7"
+        },
+        {
+          "key": "currency",
+          "rawValue": "USD",
+          "filename": "multi.xlsx",
+          "locator": "'RFQ'!B8"
+        },
+        {
+          "key": "validity",
+          "rawValue": "2026-10-31",
+          "filename": "multi.xlsx",
+          "locator": "'RFQ'!B9"
+        }
+      ],
+      "items": [
+        {
+          "model": "FL-200",
+          "fields": [
+            {
+              "key": "productName",
+              "rawValue": "Machined flange",
+              "filename": "multi.xlsx",
+              "locator": "'RFQ'!A11"
+            },
+            {
+              "key": "productName",
+              "rawValue": "Machined flange",
+              "filename": "multi.pdf",
+              "locator": "page:1:line:3"
+            },
+            {
+              "key": "model",
+              "rawValue": "FL-200",
+              "filename": "multi.xlsx",
+              "locator": "'RFQ'!B11"
+            },
+            {
+              "key": "model",
+              "rawValue": "FL-200",
+              "filename": "multi.pdf",
+              "locator": "page:1:line:3"
+            },
+            {
+              "key": "quantity",
+              "rawValue": "200",
+              "filename": "multi.xlsx",
+              "locator": "'RFQ'!C11"
+            },
+            {
+              "key": "quantity",
+              "rawValue": "200",
+              "filename": "multi.pdf",
+              "locator": "page:1:line:3"
+            },
+            {
+              "key": "unit",
+              "rawValue": "pcs",
+              "filename": "multi.xlsx",
+              "locator": "'RFQ'!D11"
+            },
+            {
+              "key": "unit",
+              "rawValue": "pcs",
+              "filename": "multi.pdf",
+              "locator": "page:1:line:3"
+            },
+            {
+              "key": "material",
+              "rawValue": "Stainless steel 316",
+              "filename": "multi.xlsx",
+              "locator": "'RFQ'!E11"
+            },
+            {
+              "key": "material",
+              "rawValue": "Stainless steel 316",
+              "filename": "multi.pdf",
+              "locator": "page:1:line:3"
+            },
+            {
+              "key": "dimensions",
+              "rawValue": "100 x 15 mm",
+              "filename": "multi.xlsx",
+              "locator": "'RFQ'!F11"
+            },
+            {
+              "key": "dimensions",
+              "rawValue": "100 x 15 mm",
+              "filename": "multi.pdf",
+              "locator": "page:1:line:3"
+            },
+            {
+              "key": "technicalParameters",
+              "rawValue": "Surface Ra 1.6",
+              "filename": "multi.xlsx",
+              "locator": "'RFQ'!G11"
+            },
+            {
+              "key": "technicalParameters",
+              "rawValue": "Surface Ra 1.6",
+              "filename": "multi.pdf",
+              "locator": "page:1:line:3"
+            }
+          ]
+        },
+        {
+          "model": "SP-050",
+          "fields": [
+            {
+              "key": "productName",
+              "rawValue": "Spacer",
+              "filename": "multi.xlsx",
+              "locator": "'RFQ'!A12"
+            },
+            {
+              "key": "productName",
+              "rawValue": "Spacer",
+              "filename": "multi.pdf",
+              "locator": "page:1:line:4"
+            },
+            {
+              "key": "model",
+              "rawValue": "SP-050",
+              "filename": "multi.xlsx",
+              "locator": "'RFQ'!B12"
+            },
+            {
+              "key": "model",
+              "rawValue": "SP-050",
+              "filename": "multi.pdf",
+              "locator": "page:1:line:4"
+            },
+            {
+              "key": "quantity",
+              "rawValue": "50",
+              "filename": "multi.xlsx",
+              "locator": "'RFQ'!C12"
+            },
+            {
+              "key": "quantity",
+              "rawValue": "50",
+              "filename": "multi.pdf",
+              "locator": "page:1:line:4"
+            },
+            {
+              "key": "unit",
+              "rawValue": "pcs",
+              "filename": "multi.xlsx",
+              "locator": "'RFQ'!D12"
+            },
+            {
+              "key": "unit",
+              "rawValue": "pcs",
+              "filename": "multi.pdf",
+              "locator": "page:1:line:4"
+            },
+            {
+              "key": "material",
+              "rawValue": "Aluminum 6061",
+              "filename": "multi.xlsx",
+              "locator": "'RFQ'!E12"
+            },
+            {
+              "key": "material",
+              "rawValue": "Aluminum 6061",
+              "filename": "multi.pdf",
+              "locator": "page:1:line:4"
+            },
+            {
+              "key": "dimensions",
+              "rawValue": "20 x 10 mm",
+              "filename": "multi.xlsx",
+              "locator": "'RFQ'!F12"
+            },
+            {
+              "key": "dimensions",
+              "rawValue": "20 x 10 mm",
+              "filename": "multi.pdf",
+              "locator": "page:1:line:4"
+            },
+            {
+              "key": "technicalParameters",
+              "rawValue": "Anodized black",
+              "filename": "multi.xlsx",
+              "locator": "'RFQ'!G12"
+            },
+            {
+              "key": "technicalParameters",
+              "rawValue": "Anodized black",
+              "filename": "multi.pdf",
+              "locator": "page:1:line:4"
+            }
+          ]
+        }
+      ],
+      "checks": [
+        "multiple-items",
+        "pdf-page-locator",
+        "xlsx-cell-locator",
+        "matching-cross-document-items"
+      ]
+    }
+  },
+  {
+    "id": "03-missing",
+    "title": "缺少关键规格",
+    "description": "数量、材质与尺寸未提供；可保存草稿，不能猜测或审批。",
+    "synthetic": true,
+    "files": [
+      "03-missing/missing.eml"
+    ],
+    "expected": {
+      "itemCount": 1,
+      "fields": [
+        {
+          "key": "customer",
+          "rawValue": "Synthetic Atlas Machinery Ltd",
+          "filename": "missing.eml",
+          "locator": "email:line:2"
+        },
+        {
+          "key": "contact",
+          "rawValue": "Alex Example <alex@example.test>",
+          "filename": "missing.eml",
+          "locator": "email:line:3"
+        },
+        {
+          "key": "targetDelivery",
+          "rawValue": "2026-11-15",
+          "filename": "missing.eml",
+          "locator": "email:line:4"
+        },
+        {
+          "key": "destination",
+          "rawValue": "Hamburg, Germany",
+          "filename": "missing.eml",
+          "locator": "email:line:5"
+        },
+        {
+          "key": "incoterms",
+          "rawValue": "FCA Shanghai",
+          "filename": "missing.eml",
+          "locator": "email:line:6"
+        },
+        {
+          "key": "paymentTerms",
+          "rawValue": "30% deposit, balance before shipment",
+          "filename": "missing.eml",
+          "locator": "email:line:7"
+        },
+        {
+          "key": "currency",
+          "rawValue": "USD",
+          "filename": "missing.eml",
+          "locator": "email:line:8"
+        },
+        {
+          "key": "validity",
+          "rawValue": "2026-10-31",
+          "filename": "missing.eml",
+          "locator": "email:line:9"
+        }
+      ],
+      "items": [
+        {
+          "model": "FL-100",
+          "fields": [
+            {
+              "key": "productName",
+              "rawValue": "Machined flange",
+              "filename": "missing.eml",
+              "locator": "email:line:11"
+            },
+            {
+              "key": "model",
+              "rawValue": "FL-100",
+              "filename": "missing.eml",
+              "locator": "email:line:12"
+            },
+            {
+              "key": "unit",
+              "rawValue": "pcs",
+              "filename": "missing.eml",
+              "locator": "email:line:13"
+            },
+            {
+              "key": "technicalParameters",
+              "rawValue": "Surface Ra 1.6; drawing tolerances require human review",
+              "filename": "missing.eml",
+              "locator": "email:line:14"
+            }
+          ]
+        }
+      ],
+      "checks": [
+        "missing-quantity-blocks-approval",
+        "missing-material",
+        "missing-dimensions"
+      ]
+    }
+  },
+  {
+    "id": "04-conflict",
+    "title": "邮件与附件数量冲突",
+    "description": "邮件 FL-100 数量 100；邮件内附 Excel 数量 120。导入 EML 会保留并解析原附件。",
+    "synthetic": true,
+    "files": [
+      "04-conflict/conflict.eml"
+    ],
+    "expected": {
+      "itemCount": 1,
+      "fields": [
+        {
+          "key": "customer",
+          "rawValue": "Synthetic Atlas Machinery Ltd",
+          "filename": "conflict.eml",
+          "locator": "email:line:2"
+        },
+        {
+          "key": "contact",
+          "rawValue": "Alex Example <alex@example.test>",
+          "filename": "conflict.eml",
+          "locator": "email:line:3"
+        },
+        {
+          "key": "targetDelivery",
+          "rawValue": "2026-11-15",
+          "filename": "conflict.eml",
+          "locator": "email:line:4"
+        },
+        {
+          "key": "destination",
+          "rawValue": "Hamburg, Germany",
+          "filename": "conflict.eml",
+          "locator": "email:line:5"
+        },
+        {
+          "key": "incoterms",
+          "rawValue": "FCA Shanghai",
+          "filename": "conflict.eml",
+          "locator": "email:line:6"
+        },
+        {
+          "key": "paymentTerms",
+          "rawValue": "30% deposit, balance before shipment",
+          "filename": "conflict.eml",
+          "locator": "email:line:7"
+        },
+        {
+          "key": "currency",
+          "rawValue": "USD",
+          "filename": "conflict.eml",
+          "locator": "email:line:8"
+        },
+        {
+          "key": "validity",
+          "rawValue": "2026-10-31",
+          "filename": "conflict.eml",
+          "locator": "email:line:9"
+        }
+      ],
+      "items": [
+        {
+          "model": "FL-100",
+          "fields": [
+            {
+              "key": "productName",
+              "rawValue": "Machined flange",
+              "filename": "conflict.eml",
+              "locator": "email:line:11"
+            },
+            {
+              "key": "model",
+              "rawValue": "FL-100",
+              "filename": "conflict.eml",
+              "locator": "email:line:12"
+            },
+            {
+              "key": "quantity",
+              "rawValue": "100",
+              "filename": "conflict.eml",
+              "locator": "email:line:13"
+            },
+            {
+              "key": "unit",
+              "rawValue": "pcs",
+              "filename": "conflict.eml",
+              "locator": "email:line:14"
+            },
+            {
+              "key": "material",
+              "rawValue": "Stainless steel 304",
+              "filename": "conflict.eml",
+              "locator": "email:line:15"
+            },
+            {
+              "key": "dimensions",
+              "rawValue": "80 x 12 mm",
+              "filename": "conflict.eml",
+              "locator": "email:line:16"
+            },
+            {
+              "key": "technicalParameters",
+              "rawValue": "Surface Ra 1.6; drawing tolerances require human review",
+              "filename": "conflict.eml",
+              "locator": "email:line:17"
+            },
+            {
+              "key": "quantity",
+              "rawValue": "120",
+              "filename": "quantity-conflict.xlsx",
+              "locator": "'RFQ'!C3"
+            }
+          ]
+        }
+      ],
+      "checks": [
+        "quantity-conflict-100-vs-120",
+        "attachment-preserved",
+        "approval-blocked-until-resolved"
+      ]
+    }
+  },
+  {
+    "id": "05-units",
+    "title": "单位不一致",
+    "description": "邮件按 pcs，附件同型号按 kg；不能隐式换算。",
+    "synthetic": true,
+    "files": [
+      "05-units/units.eml",
+      "05-units/units.pdf"
+    ],
+    "expected": {
+      "itemCount": 1,
+      "fields": [
+        {
+          "key": "customer",
+          "rawValue": "Synthetic Atlas Machinery Ltd",
+          "filename": "units.eml",
+          "locator": "email:line:2"
+        },
+        {
+          "key": "contact",
+          "rawValue": "Alex Example <alex@example.test>",
+          "filename": "units.eml",
+          "locator": "email:line:3"
+        },
+        {
+          "key": "targetDelivery",
+          "rawValue": "2026-11-15",
+          "filename": "units.eml",
+          "locator": "email:line:4"
+        },
+        {
+          "key": "destination",
+          "rawValue": "Hamburg, Germany",
+          "filename": "units.eml",
+          "locator": "email:line:5"
+        },
+        {
+          "key": "incoterms",
+          "rawValue": "FCA Shanghai",
+          "filename": "units.eml",
+          "locator": "email:line:6"
+        },
+        {
+          "key": "paymentTerms",
+          "rawValue": "30% deposit, balance before shipment",
+          "filename": "units.eml",
+          "locator": "email:line:7"
+        },
+        {
+          "key": "currency",
+          "rawValue": "USD",
+          "filename": "units.eml",
+          "locator": "email:line:8"
+        },
+        {
+          "key": "validity",
+          "rawValue": "2026-10-31",
+          "filename": "units.eml",
+          "locator": "email:line:9"
+        }
+      ],
+      "items": [
+        {
+          "model": "FL-100",
+          "fields": [
+            {
+              "key": "productName",
+              "rawValue": "Machined flange",
+              "filename": "units.eml",
+              "locator": "email:line:11"
+            },
+            {
+              "key": "model",
+              "rawValue": "FL-100",
+              "filename": "units.eml",
+              "locator": "email:line:12"
+            },
+            {
+              "key": "quantity",
+              "rawValue": "100",
+              "filename": "units.eml",
+              "locator": "email:line:13"
+            },
+            {
+              "key": "unit",
+              "rawValue": "pcs",
+              "filename": "units.eml",
+              "locator": "email:line:14"
+            },
+            {
+              "key": "material",
+              "rawValue": "Stainless steel 304",
+              "filename": "units.eml",
+              "locator": "email:line:15"
+            },
+            {
+              "key": "dimensions",
+              "rawValue": "80 x 12 mm",
+              "filename": "units.eml",
+              "locator": "email:line:16"
+            },
+            {
+              "key": "technicalParameters",
+              "rawValue": "Surface Ra 1.6; drawing tolerances require human review",
+              "filename": "units.eml",
+              "locator": "email:line:17"
+            },
+            {
+              "key": "unit",
+              "rawValue": "kg",
+              "filename": "units.pdf",
+              "locator": "page:1:line:4"
+            }
+          ]
+        }
+      ],
+      "checks": [
+        "unit-conflict",
+        "no-implicit-conversion"
+      ]
+    }
+  },
+  {
+    "id": "06-manual",
+    "title": "扫描件与 CAD 附件",
+    "description": "邮件夹带无文字层 PDF 和不支持的 CAD 占位文件；二者均保留并明确标记未解析。",
+    "synthetic": true,
+    "files": [
+      "06-manual/manual.eml"
+    ],
+    "expected": {
+      "itemCount": 0,
+      "fields": [
+        {
+          "key": "customer",
+          "rawValue": "Synthetic Scan Works",
+          "filename": "manual.eml",
+          "locator": "email:line:2"
+        }
+      ],
+      "items": [],
+      "documentStatuses": {
+        "scan.pdf": "manual",
+        "drawing.step": "manual"
+      },
+      "checks": [
+        "no-ocr-claim",
+        "no-cad-inference",
+        "attachments-preserved",
+        "manual-entry-available"
+      ]
+    }
+  },
+  {
+    "id": "07-corrupt",
+    "title": "损坏文件",
+    "description": "伪装扩展名的 PDF 与 XLSX；解析失败应可重试或人工处理。",
+    "synthetic": true,
+    "files": [
+      "07-corrupt/broken.pdf",
+      "07-corrupt/broken.xlsx"
+    ],
+    "expected": {
+      "itemCount": 0,
+      "fields": [],
+      "items": [],
+      "documentStatuses": {
+        "broken.pdf": "failed",
+        "broken.xlsx": "failed"
+      },
+      "checks": [
+        "readable-error",
+        "retry-idempotent",
+        "manual-recovery"
+      ]
+    }
+  },
+  {
+    "id": "08-duplicate",
+    "title": "重复导入",
+    "description": "与完整单品样本字节完全一致；导入后应提示重复，不新增询价。",
+    "synthetic": true,
+    "files": [
+      "08-duplicate/complete-copy.eml"
+    ],
+    "expected": {
+      "itemCount": 1,
+      "fields": [
+        {
+          "key": "customer",
+          "rawValue": "Synthetic Atlas Machinery Ltd",
+          "filename": "complete-copy.eml",
+          "locator": "email:line:2"
+        },
+        {
+          "key": "contact",
+          "rawValue": "Alex Example <alex@example.test>",
+          "filename": "complete-copy.eml",
+          "locator": "email:line:3"
+        },
+        {
+          "key": "targetDelivery",
+          "rawValue": "2026-11-15",
+          "filename": "complete-copy.eml",
+          "locator": "email:line:4"
+        },
+        {
+          "key": "destination",
+          "rawValue": "Hamburg, Germany",
+          "filename": "complete-copy.eml",
+          "locator": "email:line:5"
+        },
+        {
+          "key": "incoterms",
+          "rawValue": "FCA Shanghai",
+          "filename": "complete-copy.eml",
+          "locator": "email:line:6"
+        },
+        {
+          "key": "paymentTerms",
+          "rawValue": "30% deposit, balance before shipment",
+          "filename": "complete-copy.eml",
+          "locator": "email:line:7"
+        },
+        {
+          "key": "currency",
+          "rawValue": "USD",
+          "filename": "complete-copy.eml",
+          "locator": "email:line:8"
+        },
+        {
+          "key": "validity",
+          "rawValue": "2026-10-31",
+          "filename": "complete-copy.eml",
+          "locator": "email:line:9"
+        }
+      ],
+      "items": [
+        {
+          "model": "FL-100",
+          "fields": [
+            {
+              "key": "productName",
+              "rawValue": "Machined flange",
+              "filename": "complete-copy.eml",
+              "locator": "email:line:11"
+            },
+            {
+              "key": "model",
+              "rawValue": "FL-100",
+              "filename": "complete-copy.eml",
+              "locator": "email:line:12"
+            },
+            {
+              "key": "quantity",
+              "rawValue": "100",
+              "filename": "complete-copy.eml",
+              "locator": "email:line:13"
+            },
+            {
+              "key": "unit",
+              "rawValue": "pcs",
+              "filename": "complete-copy.eml",
+              "locator": "email:line:14"
+            },
+            {
+              "key": "material",
+              "rawValue": "Stainless steel 304",
+              "filename": "complete-copy.eml",
+              "locator": "email:line:15"
+            },
+            {
+              "key": "dimensions",
+              "rawValue": "80 x 12 mm",
+              "filename": "complete-copy.eml",
+              "locator": "email:line:16"
+            },
+            {
+              "key": "technicalParameters",
+              "rawValue": "Surface Ra 1.6; drawing tolerances require human review",
+              "filename": "complete-copy.eml",
+              "locator": "email:line:17"
+            }
+          ]
+        }
+      ],
+      "duplicateOf": "01-complete",
+      "checks": [
+        "content-hash-deduplication",
+        "no-duplicate-rfq"
+      ]
+    }
+  },
+  {
+    "id": "09-amended-approved",
+    "title": "审批后修改",
+    "description": "先审核、算价并批准原询价，再将数量 100 修改为 125；旧批准失效，正式导出必须重新审批。",
+    "synthetic": true,
+    "files": [
+      "09-amended-approved/amendment.eml"
+    ],
+    "expected": {
+      "itemCount": 1,
+      "fields": [
+        {
+          "key": "customer",
+          "rawValue": "Synthetic Amendment Co",
+          "filename": "amendment.eml",
+          "locator": "email:line:2"
+        },
+        {
+          "key": "contact",
+          "rawValue": "Alex Example <alex@example.test>",
+          "filename": "amendment.eml",
+          "locator": "email:line:3"
+        },
+        {
+          "key": "targetDelivery",
+          "rawValue": "2026-11-15",
+          "filename": "amendment.eml",
+          "locator": "email:line:4"
+        },
+        {
+          "key": "destination",
+          "rawValue": "Hamburg, Germany",
+          "filename": "amendment.eml",
+          "locator": "email:line:5"
+        },
+        {
+          "key": "incoterms",
+          "rawValue": "FCA Shanghai",
+          "filename": "amendment.eml",
+          "locator": "email:line:6"
+        },
+        {
+          "key": "paymentTerms",
+          "rawValue": "30% deposit, balance before shipment",
+          "filename": "amendment.eml",
+          "locator": "email:line:7"
+        },
+        {
+          "key": "currency",
+          "rawValue": "USD",
+          "filename": "amendment.eml",
+          "locator": "email:line:8"
+        },
+        {
+          "key": "validity",
+          "rawValue": "2026-10-31",
+          "filename": "amendment.eml",
+          "locator": "email:line:9"
+        }
+      ],
+      "items": [
+        {
+          "model": "FL-100",
+          "fields": [
+            {
+              "key": "productName",
+              "rawValue": "Machined flange",
+              "filename": "amendment.eml",
+              "locator": "email:line:11"
+            },
+            {
+              "key": "model",
+              "rawValue": "FL-100",
+              "filename": "amendment.eml",
+              "locator": "email:line:12"
+            },
+            {
+              "key": "quantity",
+              "rawValue": "100",
+              "filename": "amendment.eml",
+              "locator": "email:line:13"
+            },
+            {
+              "key": "unit",
+              "rawValue": "pcs",
+              "filename": "amendment.eml",
+              "locator": "email:line:14"
+            },
+            {
+              "key": "material",
+              "rawValue": "Stainless steel 304",
+              "filename": "amendment.eml",
+              "locator": "email:line:15"
+            },
+            {
+              "key": "dimensions",
+              "rawValue": "80 x 12 mm",
+              "filename": "amendment.eml",
+              "locator": "email:line:16"
+            },
+            {
+              "key": "technicalParameters",
+              "rawValue": "Surface Ra 1.6; drawing tolerances require human review",
+              "filename": "amendment.eml",
+              "locator": "email:line:17"
+            }
+          ]
+        }
+      ],
+      "workflow": {
+        "amendField": "quantity",
+        "originalValue": "100",
+        "newValue": "125",
+        "expectedApproval": "superseded"
+      },
+      "checks": [
+        "approval-bound-to-version",
+        "amendment-invalidates-approval",
+        "formal-export-blocked"
+      ]
+    }
+  },
+  {
+    "id": "10-injection",
+    "title": "邮件夹带操纵指令",
+    "description": "正文包含越权审批、外发与脚本字符串。仅作为原文保存，不运行且不改变权限。",
+    "synthetic": true,
+    "files": [
+      "10-injection/injection.eml"
+    ],
+    "expected": {
+      "itemCount": 1,
+      "fields": [
+        {
+          "key": "customer",
+          "rawValue": "Synthetic Atlas Machinery Ltd",
+          "filename": "injection.eml",
+          "locator": "email:line:2"
+        },
+        {
+          "key": "contact",
+          "rawValue": "Alex Example <alex@example.test>",
+          "filename": "injection.eml",
+          "locator": "email:line:3"
+        },
+        {
+          "key": "targetDelivery",
+          "rawValue": "2026-11-15",
+          "filename": "injection.eml",
+          "locator": "email:line:4"
+        },
+        {
+          "key": "destination",
+          "rawValue": "Hamburg, Germany",
+          "filename": "injection.eml",
+          "locator": "email:line:5"
+        },
+        {
+          "key": "incoterms",
+          "rawValue": "FCA Shanghai",
+          "filename": "injection.eml",
+          "locator": "email:line:6"
+        },
+        {
+          "key": "paymentTerms",
+          "rawValue": "30% deposit, balance before shipment",
+          "filename": "injection.eml",
+          "locator": "email:line:7"
+        },
+        {
+          "key": "currency",
+          "rawValue": "USD",
+          "filename": "injection.eml",
+          "locator": "email:line:8"
+        },
+        {
+          "key": "validity",
+          "rawValue": "2026-10-31",
+          "filename": "injection.eml",
+          "locator": "email:line:9"
+        }
+      ],
+      "items": [
+        {
+          "model": "FL-100",
+          "fields": [
+            {
+              "key": "productName",
+              "rawValue": "Machined flange",
+              "filename": "injection.eml",
+              "locator": "email:line:11"
+            },
+            {
+              "key": "model",
+              "rawValue": "FL-100",
+              "filename": "injection.eml",
+              "locator": "email:line:12"
+            },
+            {
+              "key": "quantity",
+              "rawValue": "100",
+              "filename": "injection.eml",
+              "locator": "email:line:13"
+            },
+            {
+              "key": "unit",
+              "rawValue": "pcs",
+              "filename": "injection.eml",
+              "locator": "email:line:14"
+            },
+            {
+              "key": "material",
+              "rawValue": "Stainless steel 304",
+              "filename": "injection.eml",
+              "locator": "email:line:15"
+            },
+            {
+              "key": "dimensions",
+              "rawValue": "80 x 12 mm",
+              "filename": "injection.eml",
+              "locator": "email:line:16"
+            },
+            {
+              "key": "technicalParameters",
+              "rawValue": "Surface Ra 1.6; drawing tolerances require human review",
+              "filename": "injection.eml",
+              "locator": "email:line:17"
+            }
+          ]
+        }
+      ],
+      "checks": [
+        "untrusted-input-not-executed",
+        "no-external-send",
+        "roles-unchanged",
+        "manual-approval-required"
+      ]
+    }
+  },
+  {
+    "id": "11-relative-date",
+    "title": "相对交期",
+    "description": "next Friday 未锚定到业务确认日期，明确提示人工确认。",
+    "synthetic": true,
+    "files": [
+      "11-relative-date/relative.eml"
+    ],
+    "expected": {
+      "itemCount": 1,
+      "fields": [
+        {
+          "key": "customer",
+          "rawValue": "Synthetic Atlas Machinery Ltd",
+          "filename": "relative.eml",
+          "locator": "email:line:2"
+        },
+        {
+          "key": "contact",
+          "rawValue": "Alex Example <alex@example.test>",
+          "filename": "relative.eml",
+          "locator": "email:line:3"
+        },
+        {
+          "key": "targetDelivery",
+          "rawValue": "next Friday",
+          "filename": "relative.eml",
+          "locator": "email:line:4"
+        },
+        {
+          "key": "destination",
+          "rawValue": "Hamburg, Germany",
+          "filename": "relative.eml",
+          "locator": "email:line:5"
+        },
+        {
+          "key": "incoterms",
+          "rawValue": "FCA Shanghai",
+          "filename": "relative.eml",
+          "locator": "email:line:6"
+        },
+        {
+          "key": "paymentTerms",
+          "rawValue": "30% deposit, balance before shipment",
+          "filename": "relative.eml",
+          "locator": "email:line:7"
+        },
+        {
+          "key": "currency",
+          "rawValue": "USD",
+          "filename": "relative.eml",
+          "locator": "email:line:8"
+        },
+        {
+          "key": "validity",
+          "rawValue": "2026-10-31",
+          "filename": "relative.eml",
+          "locator": "email:line:9"
+        }
+      ],
+      "items": [
+        {
+          "model": "FL-100",
+          "fields": [
+            {
+              "key": "productName",
+              "rawValue": "Machined flange",
+              "filename": "relative.eml",
+              "locator": "email:line:11"
+            },
+            {
+              "key": "model",
+              "rawValue": "FL-100",
+              "filename": "relative.eml",
+              "locator": "email:line:12"
+            },
+            {
+              "key": "quantity",
+              "rawValue": "100",
+              "filename": "relative.eml",
+              "locator": "email:line:13"
+            },
+            {
+              "key": "unit",
+              "rawValue": "pcs",
+              "filename": "relative.eml",
+              "locator": "email:line:14"
+            },
+            {
+              "key": "material",
+              "rawValue": "Stainless steel 304",
+              "filename": "relative.eml",
+              "locator": "email:line:15"
+            },
+            {
+              "key": "dimensions",
+              "rawValue": "80 x 12 mm",
+              "filename": "relative.eml",
+              "locator": "email:line:16"
+            },
+            {
+              "key": "technicalParameters",
+              "rawValue": "Surface Ra 1.6; drawing tolerances require human review",
+              "filename": "relative.eml",
+              "locator": "email:line:17"
+            }
+          ]
+        }
+      ],
+      "checks": [
+        "relative-date-unresolved",
+        "no-date-guess"
+      ]
+    }
+  },
+  {
+    "id": "12-repeat-model",
+    "title": "同文档重复型号",
+    "description": "同封邮件两个产品行均为 FL-100，但数量分别 100 和 50；保留两个原始行并提示重复型号。",
+    "synthetic": true,
+    "files": [
+      "12-repeat-model/repeat.eml"
+    ],
+    "expected": {
+      "itemCount": 2,
+      "fields": [
+        {
+          "key": "customer",
+          "rawValue": "Synthetic Atlas Machinery Ltd",
+          "filename": "repeat.eml",
+          "locator": "email:line:2"
+        },
+        {
+          "key": "contact",
+          "rawValue": "Alex Example <alex@example.test>",
+          "filename": "repeat.eml",
+          "locator": "email:line:3"
+        },
+        {
+          "key": "targetDelivery",
+          "rawValue": "2026-11-15",
+          "filename": "repeat.eml",
+          "locator": "email:line:4"
+        },
+        {
+          "key": "destination",
+          "rawValue": "Hamburg, Germany",
+          "filename": "repeat.eml",
+          "locator": "email:line:5"
+        },
+        {
+          "key": "incoterms",
+          "rawValue": "FCA Shanghai",
+          "filename": "repeat.eml",
+          "locator": "email:line:6"
+        },
+        {
+          "key": "paymentTerms",
+          "rawValue": "30% deposit, balance before shipment",
+          "filename": "repeat.eml",
+          "locator": "email:line:7"
+        },
+        {
+          "key": "currency",
+          "rawValue": "USD",
+          "filename": "repeat.eml",
+          "locator": "email:line:8"
+        },
+        {
+          "key": "validity",
+          "rawValue": "2026-10-31",
+          "filename": "repeat.eml",
+          "locator": "email:line:9"
+        }
+      ],
+      "items": [
+        {
+          "model": "FL-100",
+          "fields": [
+            {
+              "key": "productName",
+              "rawValue": "Machined flange",
+              "filename": "repeat.eml",
+              "locator": "email:line:11"
+            },
+            {
+              "key": "model",
+              "rawValue": "FL-100",
+              "filename": "repeat.eml",
+              "locator": "email:line:12"
+            },
+            {
+              "key": "quantity",
+              "rawValue": "100",
+              "filename": "repeat.eml",
+              "locator": "email:line:13"
+            },
+            {
+              "key": "unit",
+              "rawValue": "pcs",
+              "filename": "repeat.eml",
+              "locator": "email:line:14"
+            },
+            {
+              "key": "material",
+              "rawValue": "Stainless steel 304",
+              "filename": "repeat.eml",
+              "locator": "email:line:15"
+            },
+            {
+              "key": "dimensions",
+              "rawValue": "80 x 12 mm",
+              "filename": "repeat.eml",
+              "locator": "email:line:16"
+            },
+            {
+              "key": "technicalParameters",
+              "rawValue": "Surface Ra 1.6; drawing tolerances require human review",
+              "filename": "repeat.eml",
+              "locator": "email:line:17"
+            }
+          ]
+        },
+        {
+          "model": "FL-100",
+          "fields": [
+            {
+              "key": "productName",
+              "rawValue": "Machined flange",
+              "filename": "repeat.eml",
+              "locator": "email:line:19"
+            },
+            {
+              "key": "model",
+              "rawValue": "FL-100",
+              "filename": "repeat.eml",
+              "locator": "email:line:20"
+            },
+            {
+              "key": "quantity",
+              "rawValue": "50",
+              "filename": "repeat.eml",
+              "locator": "email:line:21"
+            },
+            {
+              "key": "unit",
+              "rawValue": "pcs",
+              "filename": "repeat.eml",
+              "locator": "email:line:22"
+            },
+            {
+              "key": "material",
+              "rawValue": "Stainless steel 304",
+              "filename": "repeat.eml",
+              "locator": "email:line:23"
+            },
+            {
+              "key": "dimensions",
+              "rawValue": "80 x 12 mm",
+              "filename": "repeat.eml",
+              "locator": "email:line:24"
+            },
+            {
+              "key": "technicalParameters",
+              "rawValue": "Surface Ra 1.6; drawing tolerances require human review",
+              "filename": "repeat.eml",
+              "locator": "email:line:25"
+            }
+          ]
+        }
+      ],
+      "checks": [
+        "separate-original-rows",
+        "duplicate-model-warning",
+        "no-quantity-aggregation"
+      ]
+    }
+  }
+]
