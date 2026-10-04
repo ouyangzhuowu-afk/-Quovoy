@@ -1,0 +1,41 @@
+{
+  "name": "quovoy-export-operator",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1 --port 3210",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1 --port 3210",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "samples": "node --import tsx scripts/generate-samples.ts",
+    "check": "npm run typecheck && npm test && npm run build",
+    "bootstrap": "node --env-file-if-exists=.env --import tsx scripts/bootstrap.ts",
+    "seed": "node --env-file-if-exists=.env --import tsx scripts/seed-demo.ts"
+  },
+  "dependencies": {
+    "next": "16.3.8",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "decimal.js": "10.6.0",
+    "exceljs": "4.4.0",
+    "mailparser": "3.9.33",
+    "pdf-parse": "2.4.5",
+    "zod": "4.3.6"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "tsx": "4.23.15",
+    "@types/node": "24.10.1",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "@types/mailparser": "3.4.6",
+    "pdf-lib": "1.17.1"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "overrides": {
+    "uuid": "11.1.1"
+  }
+}

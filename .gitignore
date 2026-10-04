@@ -1,1 +1,11 @@
+node_modules/
+.next/
+.env
+.env.local
+data/
+*.tsbuildinfo
+.DS_Store
+docs/evidence/browser-private/
+
+data-backups/
 .worktrees/

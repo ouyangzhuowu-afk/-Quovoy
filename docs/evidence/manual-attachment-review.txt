@@ -1,0 +1,208 @@
+- alert
+- complementary:
+  - generic: q
+  - generic: quovoy.
+  - generic: 制造业 · 出口工作台
+  - paragraph: 日常工作
+  - navigation:
+    - button "询价收件箱 13":
+      - generic: 询价收件箱
+      - generic: "13"
+    - button "跟进看板":
+      - generic: 跟进看板
+  - heading "每一步，都有依据" [level=3]
+  - paragraph:
+    - text: 回到原文核实规格，
+    - text: 在发送前完成审批。
+  - button "合成样本库" [active]:
+    - generic: 合成样本库
+  - generic: 林
+  - strong: 林销售
+  - generic: 销售 · 编辑与报价
+  - button "退出登录":
+- main:
+  - generic: 工作台
+  - generic: /
+  - strong: 询价详情
+  - generic: 演示模式 · 合成样本不代表真实效果
+  - button "刷新数据":
+  - generic: 林
+  - button "← 返回收件箱":
+    - generic: ←
+    - text: 返回收件箱
+  - generic: RFQ / AC8B7D5B
+  - generic: 合成演示
+  - generic: 新询价
+  - heading "Synthetic Scan Works" [level=1]
+  - paragraph: 2026/10/02 23:29 导入·0 条产品明细·修订 1
+  - text: 负责人
+  - combobox "询价负责人":
+    - option "周主管"
+    - option "林销售" [selected]
+  - text: 询价状态
+  - combobox "询价状态":
+    - option "新询价" [selected]
+    - option "等客户补充"
+    - option "等供应商"
+    - option "待审批"
+    - option "已报价"
+    - option "跟进中"
+    - option "赢单"
+    - option "丢单"
+    - option "暂停"
+  - button "原文与审核 2":
+    - text: 原文与审核
+    - generic: "2"
+  - button "报价与审批":
+    - text: 报价与审批
+  - button "跟进与记录":
+    - text: 跟进与记录
+  - strong: 2 项阻塞需要核实
+  - paragraph: 0 / 8 个字段已确认 · 允许保存不完整草稿
+  - button "我已核实，确认全部"
+  - button "进入报价":
+    - text: 进入报价
+  - generic: SOURCE OF TRUTH
+  - heading "原始材料" [level=2]
+  - generic: 3 份
+  - button "manual.eml":
+    - text: manual.eml
+  - button "scan.pdf":
+    - text: scan.pdf
+  - button "drawing.step":
+    - text: drawing.step
+  - generic: 已读取原文
+  - link "原文件":
+    - /url: /api/documents/5d664fc2-a115-4641-8128-3a839b8c41ec
+    - text: 原文件
+  - generic: email:line:1
+  - generic: SYNTHETIC DEMO
+  - generic: email:line:2
+  - generic: "Customer: Synthetic Scan Works"
+  - generic: email:line:3
+  - generic: Please see attached drawing.
+  - text: 点击右侧字段来源，即可定位原文。
+  - generic: HUMAN REVIEW
+  - heading "结构化询价" [level=2]
+  - generic: 编辑后点击 ✓ 保存确认
+  - heading "01 客户与商业条件" [level=3]:
+    - generic: "01"
+    - text: 客户与商业条件
+  - generic: 客户名称
+  - generic: 待核实
+  - textbox "客户名称":
+    - /placeholder: 未提供 · 请人工核实
+    - text: Synthetic Scan Works
+  - button "确认客户名称":
+  - generic: 规则提取
+  - button "email:line:2":
+    - text: email:line:2
+  - generic "原始值与摘录"
+  - generic: 联系人
+  - generic: 待核实
+  - textbox "联系人":
+    - /placeholder: 未提供 · 请人工核实
+  - button "确认联系人":
+  - generic: 人工输入
+  - generic: 无可定位来源
+  - paragraph: 未提取，请人工补录
+  - generic: 目标交期
+  - generic: 待核实
+  - textbox "目标交期":
+    - /placeholder: 未提供 · 请人工核实
+  - button "确认目标交期":
+  - generic: 人工输入
+  - generic: 无可定位来源
+  - paragraph: 未提取，请人工补录
+  - generic: 目的地
+  - generic: 待核实
+  - textbox "目的地":
+    - /placeholder: 未提供 · 请人工核实
+  - button "确认目的地":
+  - generic: 人工输入
+  - generic: 无可定位来源
+  - paragraph: 未提取，请人工补录
+  - generic: Incoterms
+  - generic: 待核实
+  - textbox "Incoterms":
+    - /placeholder: 未提供 · 请人工核实
+  - button "确认Incoterms":
+  - generic: 人工输入
+  - generic: 无可定位来源
+  - paragraph: 未提取，请人工补录
+  - generic: 付款条件
+  - generic: 待核实
+  - textbox "付款条件":
+    - /placeholder: 未提供 · 请人工核实
+  - button "确认付款条件":
+  - generic: 人工输入
+  - generic: 无可定位来源
+  - paragraph: 未提取，请人工补录
+  - generic: 币种
+  - generic: 待核实
+  - textbox "币种":
+    - /placeholder: 未提供 · 请人工核实
+  - button "确认币种":
+  - generic: 人工输入
+  - generic: 无可定位来源
+  - paragraph: 未提取，请人工补录
+  - generic: 报价有效期
+  - generic: 待核实
+  - textbox "报价有效期":
+    - /placeholder: 未提供 · 请人工核实
+  - button "确认报价有效期":
+  - generic: 人工输入
+  - generic: 无可定位来源
+  - paragraph: 未提取，请人工补录
+  - button "新增产品行":
+    - text: 新增产品行
+  - heading "缺失与冲突" [level=2]
+  - paragraph: 阻塞项影响审批，提示项可保留在草稿中。
+  - generic: 10 项
+  - article:
+    - strong: 询价：客户名称尚未人工确认
+    - generic: 阻止审批
+    - paragraph: email:line:2
+    - button "客户名称":
+      - text: 客户名称
+  - article:
+    - strong: 没有产品明细，请人工添加
+    - generic: 阻止审批
+  - article:
+    - strong: 客户未提供目标交期，可保留草稿
+    - generic: 提示
+  - article:
+    - strong: 客户未提供目的地，可保留草稿
+    - generic: 提示
+  - article:
+    - strong: 客户未提供Incoterms，可保留草稿
+    - generic: 提示
+  - article:
+    - strong: 客户未提供付款条件，可保留草稿
+    - generic: 提示
+  - article:
+    - strong: 客户未提供币种，可保留草稿
+    - generic: 提示
+  - article:
+    - strong: 客户未提供报价有效期，可保留草稿
+    - generic: 提示
+  - article:
+    - strong: scan.pdf：未解析，需人工查看与补录；未解析：PDF 无可提取文字，可能是扫描件；未运行 OCR，请查看原件并人工补录。
+    - generic: 提示
+  - article:
+    - strong: drawing.step：未解析，需人工查看与补录；未解析：该附件类型暂不支持。原文件已保留，图片、CAD 和其他附件请人工审核。
+    - generic: 提示
+  - heading "沟通草稿" [level=2]
+  - paragraph: 只使用已知信息，由你核实后复制发送。
+  - button "复制":
+    - text: 复制
+  - button "客户澄清"
+  - button "供应商询价"
+  - textbox "英文客户澄清草稿": "Dear Customer, Thank you for your inquiry. To prepare an accurate quotation, please confirm the following: - Please provide the requested delivery date for your inquiry. - Please provide the destination for your inquiry. - Please provide the Incoterms for your inquiry. - Please provide the payment terms for your inquiry. - Please provide the currency for your inquiry. - Please provide the quote validity for your inquiry. - Please provide a readable text version of the attachments that could not be parsed. Dimensions, tolerances, manufacturing processes and manufacturability shown only in drawings require human engineering review. Best regards, Sales Team"
+  - strong: 实际人工审核耗时
+  - paragraph: 累计 0.0 分钟 · 仅记录实际操作，不含等待客户或供应商的时间。
+  - spinbutton "本次审核分钟数"
+  - text: 分钟
+  - button "记录耗时"
+  - generic: QUOVOY · 工作有序，判断由你。
+  - generic: 外发内容须经人工核实

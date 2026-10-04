@@ -1,0 +1,45 @@
+From: Alex Example <alex@example.test>
+To: Sales Demo <sales@example.test>
+Subject: SYNTHETIC DEMO RFQ
+Date: Thu, 01 Oct 2026 12:00:00 +0000
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="QUOVOY_SYNTHETIC_BOUNDARY"
+
+--QUOVOY_SYNTHETIC_BOUNDARY
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+SYNTHETIC DEMO
+Customer: Synthetic Scan Works
+Please see attached drawing.
+--QUOVOY_SYNTHETIC_BOUNDARY
+Content-Type: application/pdf; name="scan.pdf"
+Content-Disposition: attachment; filename="scan.pdf"
+Content-Transfer-Encoding: base64
+
+JVBERi0xLjcKJYGBgYEKCjUgMCBvYmoKPDwKL1R5cGUgL1hPYmplY3QKL1N1YnR5cGUgL0ltYWdl
+Ci9CaXRzUGVyQ29tcG9uZW50IDgKL1dpZHRoIDEKL0hlaWdodCAxCi9Db2xvclNwYWNlIC9EZXZp
+Y2VSR0IKL0ZpbHRlciAvRmxhdGVEZWNvZGUKL0xlbmd0aCAxMQo+PgpzdHJlYW0KeJz7z8AAAAMA
+AQAKZW5kc3RyZWFtCmVuZG9iagoKNiAwIG9iago8PAovRmlsdGVyIC9GbGF0ZURlY29kZQovTGVu
+Z3RoIDYyCj4+CnN0cmVhbQp4nCvkMlQwAEJDBWMDEErOhQuASCDX3NgIzDQ1NYIJoanQ98xNTE/V
+NTewtDCxMDC3sFRwyecK5AIAHh4SOwplbmRzdHJlYW0KZW5kb2JqCgo3IDAgb2JqCjw8Ci9GaWx0
+ZXIgL0ZsYXRlRGVjb2RlCi9UeXBlIC9PYmpTdG0KL04gNAovRmlyc3QgMjAKL0xlbmd0aCAzNTQK
+Pj4Kc3RyZWFtCnic1VJNT4NAEL3zK+aoB7PLssuCaUhqAWNMY1N7MBoPWDYNprKGbpP6733LthoP
+xrPAsPPxHjNDXkycBElJCemMJKVxRpNJxFYf74bYotmYXcRuu3ZHT6hyWtJzxGZ23zuKo6KIvrGz
+xjVbu4kCiWIPPiEWg233azPQpK7qmnPNOU8lLOVclDhnsBwmEKMmMvgwLY+GnE44T6ao1cFSHTi+
+PmLVkV/hBDb1mDJgZRbir76+VxW+If6aJy8iNrdt2ThDZ+Wl4CKNOcfjr8dz/I7BNM7+3+XG+Tvb
+/77hqnNbc9pPob8CX6KHkqG/VEff55Owp5QhL9FT1iGn8JKYQ8XFT/V40XjpDMYra9QOW5qd3Q9r
+iMnjaosKHNDYw93Lq1mPIbt5A/VC8zzDIDrLSZ2Ux6qDu753fqvA87m5abvmyh6gZ45b5wKaF17V
+0763zut8VHjvMImP0qPqQf4Eqze6YwplbmRzdHJlYW0KZW5kb2JqCgo4IDAgb2JqCjw8Ci9TaXpl
+IDkKL1Jvb3QgMiAwIFIKL0luZm8gMyAwIFIKL0ZpbHRlciAvRmxhdGVEZWNvZGUKL1R5cGUgL1hS
+ZWYKL0xlbmd0aCA0MQovVyBbIDEgMiAyIF0KL0luZGV4IFsgMCA5IF0KPj4Kc3RyZWFtCnicFcSx
+EQAwCAOxNxR0uUyVubMZYBUCuoMCJxcuxQXxN70tDwxlRwNVCmVuZHN0cmVhbQplbmRvYmoKCnN0
+YXJ0eHJlZgo3ODIKJSVFT0Y=
+--QUOVOY_SYNTHETIC_BOUNDARY
+Content-Type: application/step; name="drawing.step"
+Content-Disposition: attachment; filename="drawing.step"
+Content-Transfer-Encoding: base64
+
+U1lOVEhFVElDIERFTU8gQ0FEIHBsYWNlaG9sZGVyLiBObyBnZW9tZXRyeSBpcyBwYXJzZWQgb3Ig
+ZXhlY3V0ZWQuCg==
+--QUOVOY_SYNTHETIC_BOUNDARY--

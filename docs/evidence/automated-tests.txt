@@ -1,0 +1,72 @@
+
+> quovoy-export-operator@0.1.0 test
+> node --import tsx --test tests/*.test.ts
+
+▶ all 12 labeled synthetic scenarios match authored expected fields, separate rows and actual source locations
+  ✔ 01-complete (5.846959ms)
+  ✔ 02-multiple (625.841167ms)
+  ✔ 03-missing (9.030292ms)
+  ✔ 04-conflict (5.917042ms)
+  ✔ 05-units (3.465208ms)
+  ✔ 06-manual (2.816959ms)
+  ✔ 07-corrupt (0.640375ms)
+  ✔ 08-duplicate (1.222791ms)
+  ✔ 09-amended-approved (1.171416ms)
+  ✔ 10-injection (1.275875ms)
+  ✔ 11-relative-date (1.107542ms)
+  ✔ 12-repeat-model (1.380292ms)
+✔ all 12 labeled synthetic scenarios match authored expected fields, separate rows and actual source locations (664.15675ms)
+✔ email attachments are decoded byte-for-byte; disagreements remain on one item (7.057667ms)
+✔ arbitrary uploads never receive preset demo customer or product facts (0.204375ms)
+✔ corrupt, unsupported and over-limit input retains originals with explicit fallback (1.250417ms)
+✔ ZIP preflight rejects oversized expanded workbooks without inflating them (0.097458ms)
+✔ Excel formula cached values are not trusted or evaluated (13.152209ms)
+✔ untrusted body instructions remain source text and cannot create executable actions (0.804042ms)
+✔ structured provider sends strict schema without tools and independently verifies raw evidence (7.735209ms)
+✔ model refusals, invalid schemas, service failures and absent credentials fail explicitly for retry/manual recovery (0.747625ms)
+✔ provider selection requires an explicit real mode and does not silently downgrade bad configuration (0.093958ms)
+✔ manual empty item added while the real provider mock is pending survives its late response (20.676459ms)
+✔ manual field update while the real provider mock is pending cannot be overwritten or reset (9.50575ms)
+✔ a manual empty item added BEFORE retry also blocks destructive reprocessing (3.371459ms)
+✔ concurrent retries acquire only one persisted job and never duplicate product or field rows (4.547416ms)
+✔ provider timeout is persisted without leaking upstream detail, survives restart, then recovers once (11.952ms)
+✔ matching repeated evidence across PDF and XLSX stays two items without false conflicts (538.439209ms)
+✔ late completion from an expired lease cannot overwrite a newer successful attempt or its job status (5.057125ms)
+✔ equivalent quantity strings 100 and 100.0 retain evidence without false conflict or clarification (2.303417ms)
+✔ HTTP session is required for RFQ, original file and quote exports (12.629458ms)
+✔ HTTP route denies cross-organization source reads and writes across nested resources (18.902209ms)
+✔ cross-site modifying requests are denied before any mutation (6.400083ms)
+✔ caller-supplied organization, role and owner cannot authorize approval or move data (21.027416ms)
+✔ original files download byte-for-byte under authentication with forced attachment headers (11.56075ms)
+✔ official HTML exports escape source markup, hide internal cost and preserve approval boundary (6.252541ms)
+✔ turning off public demo access invalidates pre-existing demo sessions and credentials (24.771958ms)
+✔ quote customer identity is a server-owned immutable snapshot after RFQ customer revisions (11.5895ms)
+✔ duplicate content hashing includes component boundaries to avoid dropping distinct inquiries (2.89375ms)
+✔ invalid or oversized JSON receives actionable client errors (0.571667ms)
+✔ host origin regression accepts browser 127.0.0.1 when Next internal URL is localhost (5.672666ms)
+✔ email regeneration regression updates carried automatic drafts and preserves authored messages across frozen versions (7.913333ms)
+✔ deterministic quotation uses documented FX direction, margin and sums (10.402125ms)
+✔ invalid quantities, missing costs and ambiguous currency direction never silently calculate (0.531541ms)
+▶ persistent full workflow, controlled permissions, version invalidation, tasks and recovery
+  ✔ unreviewed draft can calculate but cannot submit or formally export (4.379667ms)
+  ✔ cross-organization fields, original files and quote cannot be read or mutated (1.645834ms)
+  ✔ sales confirms sources, manager approves immutable version, export never marks sent (12.829125ms)
+  ✔ manual send confirmation creates one task idempotently, can complete/postpone (4.329041ms)
+  ✔ editing approved specifications requires a new version and approval (8.7835ms)
+  ✔ duplicate import and completed retry preserve reviewed fields and database restart (8.1855ms)
+  ✔ conflicting email and attachment quantities require consistent manual confirmation (42.932875ms)
+  ✔ missing costs/critical specs block calculations/approval, uncertain units block (9.907666ms)
+  ✔ corrupt files retain original with retry, then manual edits survive retry refusal (3.923541ms)
+  ✔ unsupported files permit explicit manual product recording (1.86925ms)
+  ✔ model configuration failure persists job then demo retry recovers idempotently (2.563583ms)
+  ✔ malicious email remains text without changing roles, approving, sending or executing (3.283416ms)
+✔ persistent full workflow, controlled permissions, version invalidation, tasks and recovery (268.3195ms)
+✔ incomplete quotation workspace persists without inventing money or retaining approval (57.797ms)
+ℹ tests 58
+ℹ suites 0
+ℹ pass 58
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1086.552958

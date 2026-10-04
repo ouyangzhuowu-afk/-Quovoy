@@ -1,0 +1,191 @@
+- alert
+- complementary:
+  - generic: q
+  - generic: quovoy.
+  - generic: 制造业 · 出口工作台
+  - paragraph: 日常工作
+  - navigation:
+    - button "询价收件箱 13":
+      - generic: 询价收件箱
+      - generic: "13"
+    - button "跟进看板":
+      - generic: 跟进看板
+  - heading "每一步，都有依据" [level=3]
+  - paragraph:
+    - text: 回到原文核实规格，
+    - text: 在发送前完成审批。
+  - button "合成样本库":
+    - generic: 合成样本库
+  - generic: 林
+  - strong: 林销售
+  - generic: 销售 · 编辑与报价
+  - button "退出登录":
+- main:
+  - generic: 工作台
+  - generic: /
+  - strong: 询价详情
+  - generic: 演示模式 · 合成样本不代表真实效果
+  - button "刷新数据":
+  - generic: 林
+  - button "← 返回收件箱":
+    - generic: ←
+    - text: 返回收件箱
+  - generic: RFQ / 2A0A1F29
+  - generic: 合成演示
+  - generic: 已报价
+  - heading "Synthetic Browser Works" [level=1]
+  - paragraph: 2026/10/02 23:43 导入·1 条产品明细·修订 17
+  - text: 负责人
+  - combobox "询价负责人":
+    - option "周主管"
+    - option "林销售" [selected]
+  - text: 询价状态
+  - combobox "询价状态":
+    - option "新询价"
+    - option "等客户补充"
+    - option "等供应商"
+    - option "待审批"
+    - option "已报价" [selected]
+    - option "跟进中"
+    - option "赢单"
+    - option "丢单"
+    - option "暂停"
+  - button "原文与审核":
+    - text: 原文与审核
+  - button "报价与审批 2" [active]:
+    - text: 报价与审批
+    - generic: "2"
+  - button "跟进与记录":
+    - text: 跟进与记录
+  - generic: COST → PRICE
+  - heading "成本与报价规则" [level=2]
+  - paragraph: 人工填入成本，每次保存生成独立版本。
+  - generic: 产品成本
+  - generic: "01"
+  - strong: Machined flange
+  - generic: BR-100 · 100 pcs
+  - text: 单位成本
+  - textbox "产品 1 单位成本":
+    - /placeholder: 必须明确填写
+    - text: "20"
+  - text: 运费
+  - textbox "运费":
+    - /placeholder: 无运费请明确填 0
+    - text: "200"
+  - text: 其他费用
+  - textbox "其他费用":
+    - /placeholder: 无其他费用请明确填 0
+    - text: "0"
+  - generic: 计算规则
+  - text: 成本币种
+  - textbox "成本币种":
+    - /placeholder: 例如 CNY
+    - text: CNY
+  - text: 报价币种
+  - textbox "报价币种":
+    - /placeholder: 例如 USD
+    - text: USD
+  - text: 加价率 %
+  - textbox "加价率 %":
+    - /placeholder: 例如 25
+    - text: "25"
+  - text: 人工汇率
+  - textbox "人工汇率":
+    - /placeholder: 例如 7.2
+    - text: "7.2"
+  - strong: 1 USD = 7.2 CNY
+  - paragraph: 总价 =（产品成本 + 运费 + 其他费用）×（1 + 加价率）÷ 汇率
+  - paragraph: 加价率 25% 对应毛利率 20%。不自动计入税费；汇率由人工录入。
+  - generic: 商业条款
+  - text: 报价有效期
+  - textbox "报价有效期": 2026-12-01
+  - text: Incoterms
+  - textbox "Incoterms":
+    - /placeholder: 未确认可留空
+    - text: FCA Shanghai
+  - text: 交期
+  - textbox "交期":
+    - /placeholder: 未确认可留空
+    - text: 2026-11-15
+  - text: 付款条件
+  - textbox "付款条件":
+    - /placeholder: 未确认可留空
+    - text: 30% deposit, balance before shipment
+  - generic "英文报价邮件 · 可人工编辑"
+  - button "暂存未完成报价"
+  - generic: 成本不完整时也可暂存；保存修改会使旧审批失效。
+  - button "计算并保存新版本":
+    - text: 计算并保存新版本
+  - generic: 价格、规格或邮件变更，均需重新审批。
+  - generic: QUOTE PREVIEW
+  - heading "报价预览" [level=2]
+  - combobox "选择报价版本":
+    - option "V2 · 已批准" [selected]
+    - option "V1 · 已失效"
+  - generic: q
+  - generic: quovoy.
+  - generic: 已批准
+  - text: QUOTATION
+  - heading "Synthetic Browser Works" [level=3]
+  - paragraph: QUOTE V2 · RFQ REV 17
+  - generic: USD
+  - table:
+    - rowgroup:
+      - row "产品 / 规格 数量 金额":
+        - columnheader "产品 / 规格"
+        - columnheader "数量"
+        - columnheader "金额"
+    - rowgroup:
+      - row "Machined flange BR-100 SS316 / 50 x 20 mm / Deburr edges 100 pcs 347.22":
+        - cell "Machined flange BR-100 SS316 / 50 x 20 mm / Deburr edges":
+          - strong: Machined flange
+          - generic: BR-100
+          - generic: SS316 / 50 x 20 mm / Deburr edges
+        - cell "100 pcs"
+        - cell "347.22"
+      - row "Freight / 运费 — 34.72":
+        - cell "Freight / 运费"
+        - cell "—"
+        - cell "34.72"
+      - row "Other / 其他费用 — 0.00":
+        - cell "Other / 其他费用"
+        - cell "—"
+        - cell "0.00"
+  - text: 报价总额
+  - generic: USD
+  - strong: "381.94"
+  - text: 成本合计
+  - strong: CNY 2,200.00
+  - text: 加价率
+  - strong: 25%
+  - text: 毛利率
+  - strong: 20.00%
+  - term: Valid until
+  - definition: 2026-12-01
+  - term: Delivery
+  - definition: 2026-11-15
+  - term: Payment
+  - definition: 30% deposit, balance before shipment
+  - term: Incoterms
+  - definition: FCA Shanghai
+  - paragraph: INTERNAL PREVIEW · 内部成本及毛利率仅供内部查看
+  - heading "随附英文邮件" [level=3]
+  - button "复制":
+    - text: 复制
+  - strong: Quotation QV-2 for your RFQ
+  - generic: "Dear Synthetic Browser Works, Thank you for your inquiry. Please review our quotation for the listed items. Total: USD 381.94 Incoterms: FCA Shanghai Delivery: 2026-11-15 Payment: 30% deposit, balance before shipment Valid until: 2026-12-01 Please confirm the specifications and commercial terms before placing an order. Best regards, Sales Team"
+  - heading "审批与交付" [level=2]
+  - paragraph: 审批绑定 V2 的报价及邮件内容。
+  - link "内部草稿导出":
+    - /url: /api/quotes/ab3df147-cd8b-4d52-b7d8-d40d9c39c2e4/export?kind=internal
+    - text: 内部草稿导出
+  - link "正式报价导出":
+    - /url: /api/quotes/ab3df147-cd8b-4d52-b7d8-d40d9c39c2e4/export?kind=formal
+    - text: 正式报价导出
+  - paragraph: 下载 HTML 后可用浏览器打印为 PDF。导出会留下操作记录。
+  - strong: 已人工确认发送
+  - paragraph: 2026/10/02 23:49 · 已建立报价后跟进任务
+  - button "已确认发送" [disabled]:
+    - text: 已确认发送
+  - generic: QUOVOY · 工作有序，判断由你。
+  - generic: 外发内容须经人工核实
